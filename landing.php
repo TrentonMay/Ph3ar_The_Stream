@@ -1,11 +1,10 @@
+<?php
 /**
  * Created by PhpStorm.
  * User: sctrm
  * Date: 1/18/2018
  * Time: 6:47 PM
  */
-<?php
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,8 +19,12 @@
     <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<nav>
-    
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <img src="assets/Ph3ar_Logo.png">
+        </div>
+    </div>
 </nav>
 
 </body>
