@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css.map">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css.map">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css">
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
