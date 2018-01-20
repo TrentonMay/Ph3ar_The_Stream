@@ -4,4 +4,7 @@
 .navbar-brand img{
     width: 20%;
 }
-
+body{
+    padding-top: 80px;
+    background-color: #495057;
+}

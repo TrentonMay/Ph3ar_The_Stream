@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css">
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
@@ -34,6 +35,17 @@
         </ul>
 
     </nav>
+
+    <div id="twitch-embed" class="d-flex justify-content-center"></div>
+
+    <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+            width: "80%",
+            height: 480,
+            channel: "monstercat"
+        });
+    </script>
+
 
 </body>
 </html>
