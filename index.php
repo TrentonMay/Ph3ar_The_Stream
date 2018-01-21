@@ -35,16 +35,20 @@
         </ul>
 
     </nav>
+    <?php
+        require 'config.php';
+        $sql = "SELECT streams from streams";
+        $result = $conn->query($sql);
+        while($row = $result->fetch_assoc()) {
+            $stream = $row["streams"];
 
-    <div id="twitch-embed" class="d-flex justify-content-center"></div>
+            echo '<div id="twitch-'.$stream.'" class="d-flex justify-content-center">
+            <iframe src="https://embed.twitch.tv?channel='.$stream.'&amp;layout=video" allowfullscreen="" scrolling="no" frameborder="0" width="80%" height="480" autoplay=false></iframe>\
+            </div>';
 
-    <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-            width: "80%",
-            height: 480,
-            channel: "monstercat"
-        });
-    </script>
+
+        }
+    ?>
 
 
 </body>
