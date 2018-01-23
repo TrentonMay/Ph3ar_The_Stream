@@ -43,8 +43,8 @@
     </nav>
     <?php
         require 'config.php';
-        $sql = "SELECT streams from streams";
-        $result = $conn->query($sql);
+        require 'functions.php';
+        $result = $conn->query("SELECT streams from streams");
         while($row = $result->fetch_assoc()) {
             $stream = $row["streams"];
 
