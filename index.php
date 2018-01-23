@@ -41,7 +41,6 @@
         </ul>
 
     </nav>
-    
     <?php
         require 'config.php';
         $sql = "SELECT streams from streams";
@@ -59,7 +58,7 @@
 
     <!-------Modal------>
     <div class="modal fade" id="streamForm" tabindex="-1" role="dialog" aria-labelledby="streamFormLabel" aria-hidden="true">
-
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title" id="streamFormlabel">Share Your Stream!</h3>
@@ -81,7 +80,7 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
+        </div>
     </div>
 </body>
 </html>
