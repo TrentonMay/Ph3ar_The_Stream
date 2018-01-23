@@ -5,12 +5,19 @@
  * Date: 1/18/2018
  * Time: 6:47 PM
  */
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>PH3AR The Stream!</title>
+    <?php
+    //Bootstrap For dummies
+    //echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">'
+    ?>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -21,7 +28,7 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
         <a class="navbar-brand" href="#"><img src="assets/Ph3ar_Logo.png"></a>
-        <ul class="navbar-nav float-right ml-auto navbar-collapse">
+        <ul class="navbar-nav float-right ml-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Log In</a>
             </li>
