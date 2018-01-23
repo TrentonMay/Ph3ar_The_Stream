@@ -15,7 +15,7 @@
     <title>PH3AR The Stream!</title>
     <?php
     //Bootstrap For dummies
-    //echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">'
+    echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">'
     ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
@@ -36,11 +36,12 @@
                 <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Start Your Stream</a>
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#streamForm">Start Your Stream</button>
             </li>
         </ul>
 
     </nav>
+    
     <?php
         require 'config.php';
         $sql = "SELECT streams from streams";
@@ -56,6 +57,31 @@
         }
     ?>
 
+    <!-------Modal------>
+    <div class="modal fade" id="streamForm" tabindex="-1" role="dialog" aria-labelledby="streamFormLabel" aria-hidden="true">
 
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="streamFormlabel">Share Your Stream!</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="streamUser">Twitch Username</label>
+                            <input id="streamUsr" type="text" class="form-control form-control-lg" placeholder="Enter Twitch Username">
+                            <small id="streamUsrHelp" class="form-text text-muted">Please make sure you are streaming before sharing your stream here</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+    </div>
 </body>
 </html>
