@@ -1,6 +1,5 @@
 <?php
 require 'config.php';
-
 function tAPI($url) {
     $ch = curl_init();
 
@@ -29,7 +28,7 @@ function trashOld(){
     $result = $conn->query($sql);
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
-            $id = $row['id'];
+            $id = $row['userid'];
             $age = $row['age'];
             $deletecalc = time() - 18000;
 
