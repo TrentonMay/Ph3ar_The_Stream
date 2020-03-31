@@ -7,7 +7,6 @@
  */
 session_start();
 require "data_handling.php";
-require "config.php";
 
 
 if(isset($_POST['streamUsr'])){
@@ -21,7 +20,7 @@ if(isset($_POST['streamUsr'])){
         $utime = time();
 
         $sql = "insert into streams(username, userid, age) VALUES ('$username', '$userid','$utime')";
-        $conn->query($sql);
+        dbQuery($sql);
         $_SESSION["success1"] = true;
         header("Location: index.php", true, 303);
         exit();
