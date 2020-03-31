@@ -6,8 +6,7 @@
  * Time: 6:47 PM
  */
 session_start();
-require "config.php";
-require "data_handling.php";
+require 'data_handling.php';
 
 
 $test = "https://api.twitch.tv/helix/users?login=monstercat";
@@ -42,23 +41,7 @@ trashOld();
 
     <div class='col-lg-12 col-md-12 col-sm-12 streamArea'>
     <?php
-        $result = $conn->query("SELECT username from streams");
-        while($row = $result->fetch_assoc()) {
-            $stream = $row["username"];
-
-
-            echo '<div id="twitch-'.$stream.'" class="col-lg-6 col-md-6 col-sm-12 float-left  streams">
-            <header class="col-lg-12 col-md-12 col-sm-12">
-                <h4 class="text-center">Stream By '.$stream.'</h4>
-            </header>
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://player.twitch.tv?channel='.$stream.'&autoplay=false&layout=video" allowfullscreen="" scrolling="no" frameborder="0" width="100%" height="400"></iframe>
-                </div>
-
-            </div>';
-
-
-        }
+        showStreams();
     ?>
     </div>
 
