@@ -8,6 +8,13 @@
 session_start();
 require "data_handling.php";
 
+function checkExists($userid){
+    $sql = "select * from streams where userid=$userid limit 1";
+    $result = dbQuery($sql);
+    if($result->num_rows) {
+        return true;
+    }
+}
 
 if(isset($_POST['streamUsr'])){
     $username = $_POST['streamUsr'];
@@ -19,8 +26,11 @@ if(isset($_POST['streamUsr'])){
         $userid = $data->data[0]->id;
         $utime = time();
 
-        $sql = "insert into streams(username, userid, age) VALUES ('$username', '$userid','$utime')";
-        dbQuery($sql);
+        if(!checkExists($userid)) {
+            $sql = "insert into streams(username, userid, age) VALUES ('$username', '$userid','$utime')";
+            dbQuery($sql);
+        }
+
         $_SESSION["success1"] = true;
         header("Location: index.php", true, 303);
         exit();
